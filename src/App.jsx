@@ -9,7 +9,6 @@ const App = () => {
       <div className="main">
         <Header />
         <Content />
-        Weather app
       </div>
     </div>
   );
