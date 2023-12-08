@@ -83,8 +83,8 @@
 
 .container .weather_sub {
     display: flex;
-    align-items: center;
-    gap: 4.2rem;
+    justify-content: center;
+    gap: 5rem;
 }
 
 .container .weather_sub h3 {
