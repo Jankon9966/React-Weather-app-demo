@@ -41,9 +41,9 @@
 
 .form button {
     padding: 5px 7px;
-    background-color:transparent;
+    background-color:#64cced;
     border: 1px solid #64cced;
-    color: #64cced;
+    color: white;
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
@@ -52,8 +52,9 @@
 }
 
 .form button:hover {
-    background-color: #64cced;
-    color: #fff;
+    background-color: #ffffff;
+    color: #64cced;
+    border: 1px solid transparent;
 }
 
 .container {
