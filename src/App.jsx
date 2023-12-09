@@ -16,7 +16,7 @@ const App = () => {
     snowIcon,
   ]);
 
-  const getWeather = async (city) => {
+  const getWeather = async () => {
     try {
       const response = await axios.get(API_URL);
       const data = response.data;
@@ -34,12 +34,18 @@ const App = () => {
         setWeatherIcon(cloudsIcon);
       } else if (data.weather[0].icon === "04d" || data.weather[0].icon === "04n") {
         setWeatherIcon(snowIcon);
+      } else if (data.weather[0].icon === "03d" || data.weather[0].icon === "03n") {
+        setWeatherData(mistIcon);
       }
 
     } catch (error) {
       console.log(error);
     }
   };
+  
+  const searchChangeHandler = (searchCity) => {
+    console.log(searchCity)
+  }
 
   useEffect(() => {
     getWeather();
@@ -48,7 +54,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="main">
-        <Header />
+        <Header onSearchCityChange={searchChangeHandler} />
         <Content data={weatherData} weatherImage={weatherIcon} />
       </div>
     </div>

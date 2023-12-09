@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Content = ({ data, weatherImage }) => {
   return (
     <div className="container">
